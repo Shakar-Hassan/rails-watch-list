@@ -2,6 +2,7 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
+@import "config/grid";
 
 // External libraries
 @import "bootstrap";
@@ -10,3 +11,21 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+html, body{
+  padding: 0;
+  margin: 0 auto;
+  height: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: black;
+  }
+}
