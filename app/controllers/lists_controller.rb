@@ -1,24 +1,31 @@
 class ListsController < ApplicationController
   def index
-    @movies = Movie.all
+    @lists = List.all
   end
 
   def show
-    @movies = Movie.find(params[:id])
+    @list = List.find(params[:id])
+
   end
 
   def new
-    @movie = Movie.new
+    @list = List.new
   end
 
   def create
-    @movie= Movie.new()
-    raise
+    @list = List.new(params_list)
+    @list.save
+    redirect_to root_path
+  end
+
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
   end
 
   private
 
-  def params_movie
-
+  def params_list
+    params.require(:list).permit(:name)
   end
 end

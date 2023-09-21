@@ -1,0 +1,11 @@
+<div class="card">
+
+
+  <%= @movie.title %>. <%= @movie.rating %>⭐
+  <br>
+  <%= @movie.overview %>
+
+  <div class="img">
+    <%= image_tag @movie.poster_url %>
+  </div>
+</div>

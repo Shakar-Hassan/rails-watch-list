@@ -1,7 +1,2 @@
-<h1><%= @movies.title %></h1> <%= link_to "back to list", lists_path %>
-
-<br>
-
-<h2>Rating: <%= @movies.rating %></h2>
-<p><%= @movies.overview%></p>
-<%= image_tag "#{@movies.poster_url}"%>
+<h1><%= @list.name %></h1>
+<%= link_to "back to list", root_path %>

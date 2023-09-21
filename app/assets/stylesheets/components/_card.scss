@@ -1,0 +1,19 @@
+.card {
+  background-color: blanchedalmond;
+  text-align: center;
+}
+
+
+.img {
+  border: 1px solid blue;
+  width: 300px;
+  margin-top: 5px;
+  margin-left: 620px;
+  background-color: lightblue;
+  img {
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+    display: block;
+  }
+}
