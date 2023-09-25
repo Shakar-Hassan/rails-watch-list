@@ -11,24 +11,27 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 20px;
-  height: 180px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  height: 150px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 }
 
 .card--link {
   align-self: center;
+  color: #000;
 }
 
 .delete--button{
   align-self: flex-start;
   margin: 4px 4px 0 0;
+  color: #ed0909;
 }
 
+.card--boxes{
+  display: flex;
+}
 
 .img {
-  border: 1px solid blue;
   width: 300px;
   margin-top: 5px;
   margin-left: 620px;

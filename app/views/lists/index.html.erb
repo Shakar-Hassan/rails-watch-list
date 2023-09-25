@@ -3,23 +3,30 @@
 </div>
 
 <div class="container d-flex flex-column py-3 h-100">
+
+
   <div class="align-self-end">
     <%= link_to "add new list", new_list_path, class: "btn btn-primary rounded" %>
   </div>
+
   <div class="custom--grid">
-    <ul>
-      <% @lists.first(1).each do |list| %>
+
+      <% @lists.each do |list| %>
         <div class="card card--list">
-          <li class="card--link">
-            <h3><%= link_to list.name, list_path(list) %></h3>
-          </li>
-          <div class="delete--button">
-            <%= link_to "❌",
-            list_path(list),
-            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            <div class="card--link">
+              <h3><%= link_to list.name, list_path(list) %></h3>
+            </div>
+
+            <div class="delete--button">
+              <%= link_to "❌",
+              list_path(list),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            </div>
+
           </div>
-        </div>
-      <% end %>
-    </ul>
+        <% end %>
+
   </div>
+
+
 </div>

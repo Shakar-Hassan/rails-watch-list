@@ -1,6 +1,24 @@
 class BookmarksController < ApplicationController
 
-  def index
-    @bookmarks= Bookmark.all
+  def new
+    @list = List.find(params[:list_id])
+    @bookmark = Bookmark.new
+  end
+
+  def create
+    # raise
+    @bookmark = Bookmark.new(params_bookmark)
+    @list = List.find(params[:list_id])
+    @bookmark.list = @list
+    if @bookmark.save
+      redirect_to list_path(@list)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  private
+  def params_bookmark
+    params.require(:bookmark).permit(:comment, :movie_id)
   end
 end

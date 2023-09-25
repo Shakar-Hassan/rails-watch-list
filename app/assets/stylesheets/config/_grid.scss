@@ -1,4 +1,9 @@
 .custom--grid{
   padding-top: 25px;
   height: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 2fr 3fr;
+  overflow:hidden;
+  overflow-y:scroll;
 }
